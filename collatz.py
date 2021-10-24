@@ -7,14 +7,7 @@ class collatz:
 	def __str__(self):
 		return f"Current n = {self.n}"
 
-	def __add__(self):
-		return NotImplementedError
-
-	def set(self, n):
-		self.n = n
-		return(self)
-
-	def nr_iters_to_one(self, print_n = False):
+	def sequence(self, print_n = False):
 		n = self.n
 
 		if n == 0:
@@ -40,6 +33,22 @@ class collatz:
 		return out
 
 def plot_sequence(n):
-	c = collatz(n).nr_iters_to_one()
-	plt.plot(c)
+	c = collatz(n).sequence()
+	max_value = max(c)
+	max_ind = c.index(max_value)
+
+	plt.plot(c, label='line & marker - no line because only 1 point')
+	plt.plot(c.index(max_value), max_value, '-ro')
+	plt.plot(len(c), 1, "-g", markersize=40)
+	plt.text(
+		max_ind + 1, 
+		max_value + 1, 
+		f"Maximum {max_value} at step {max_ind}", 
+		bbox=dict(facecolor='red', alpha=0.2)
+	)
+	plt.axhline(y = 1, color = "grey", linestyle = "--")
+	plt.xticks([])
+	plt.yticks([])
+	plt.title(f"Collatz sequence starting at {n}", horizontalalignment = "right")
+	plt.axis('off')
 	plt.show()

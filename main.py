@@ -27,7 +27,7 @@ def parse_input(arg):
 		except Exception as e:
 			print(f"Error: {e}")		
 		else:
-			c = collatz(n).nr_iters_to_one()
+			c = collatz(n).sequence()
 			print(" -> ".join([check_color(n) for n in c]))
 
 def collatz_repl():
