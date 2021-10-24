@@ -1,4 +1,4 @@
-from collatz import collatz, plot_sequence, print_sequence
+from collatz import collatz, plot_sequence, print_sequence, print_help
 
 def parse_input(arg):
 	arg = arg.split(" ")
@@ -21,6 +21,6 @@ def parse_input(arg):
 			c = collatz(n).sequence()
 			print_sequence(c)
 	elif len(arg) == 1 and arg[0] == "h":
-		print("\t- Enter a number n to print the Collatz sequence, starting from n.")
-		print("\t- Type \'plot <n>\' to view a plot of the Collatz sequence.")
+		print_help()
+
 

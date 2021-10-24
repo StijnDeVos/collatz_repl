@@ -39,6 +39,7 @@ def plot_sequence(ns):
 			f"({max_index}, {max_value})", 
 			bbox=dict(facecolor='red', alpha=0.2)
 		)
+		plt.plot(s.index(max_value), max_value, '-ro')
 
 	plt.xticks([])
 	plt.yticks([])
@@ -46,25 +47,6 @@ def plot_sequence(ns):
 	plt.axhline(y = 1, color = "grey", linestyle = "--")
 	plt.axis('off')
 	plt.show()
-	# TO-DO: change code below to draw multiple curves in a single plot
-	# max_value = max(c)
-	# max_ind = c.index(max_value)
-
-	# plt.plot(c, label='line & marker - no line because only 1 point')
-	# plt.plot(c.index(max_value), max_value, '-ro')
-	# plt.plot(len(c), 1, "-g", markersize=40)
-	# plt.text(
-	# 	max_ind + 1, 
-	# 	max_value + 1, 
-	# 	f"Maximum {max_value} at step {max_ind}", 
-	# 	bbox=dict(facecolor='red', alpha=0.2)
-	# )
-	# plt.axhline(y = 1, color = "grey", linestyle = "--")
-	# plt.xticks([])
-	# plt.yticks([])
-	# plt.title(f"Collatz sequence starting at {n}", horizontalalignment = "right")
-	# plt.axis('off')
-	# plt.show()
 
 def print_sequence(seq):
 	even = lambda n: f"{Fore.GREEN}{n}"
@@ -73,3 +55,6 @@ def print_sequence(seq):
 	
 	print(" -> ".join([check_color(n) for n in seq]))
 
+def print_help():
+		print("\t- Enter a number n to print the Collatz sequence, starting from n.")
+		print("\t- Type \'plot n1 n2 n3 ...\' to plot the Collatz sequences for each starting value n1, n2, n3, etc.")
