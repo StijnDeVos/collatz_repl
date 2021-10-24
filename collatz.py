@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 class collatz:
 	def __init__(self, n):
 		self.initial_n, self.n = n, n
@@ -30,10 +32,14 @@ class collatz:
 			nr_steps += 1
 			out.append(n)
 			if print_n is True:
-				print(f"nr_steps = {nr_steps}\tn = {n}")
-		
+				print(f"nr_steps = {nr_steps}\tn = {n}")		
 		
 		if print_n is True:
 			print(f"Needed {nr_steps} steps to reach 1")
 		
 		return out
+
+def plot_sequence(n):
+	c = collatz(n).nr_iters_to_one()
+	plt.plot(c)
+	plt.show()
