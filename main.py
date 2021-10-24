@@ -17,7 +17,11 @@ def parse_input(arg):
 		else:
 			plot_sequence(n)
 
-	if len(arg) == 1:
+	if arg[0] == "h":
+		print("\t- Enter a number n to print the Collatz sequence, starting from n.")
+		print("\t- Type \'plot <n>\' to view a plot of the Collatz sequence.")
+
+	if len(arg) == 1 and arg[0] != "h":
 		try:
 			n = int(arg[0])
 		except Exception as e:
@@ -29,12 +33,16 @@ def parse_input(arg):
 def collatz_repl():
 	try:
 		while True:
-			arg = input("collatz_repl > ")
-			parse_input(arg)
+			arg = input("collatz_repl> ")
+			if arg == "exit" or arg == "quit":
+				print("Exiting Collatz REPL...")
+				return None
+			else:
+				parse_input(arg)
 	except KeyboardInterrupt as e:
 		print("\nExiting...")
 
 if __name__ == '__main__':
 	print("Collatz REPL")
-	print("Please enter an integer.\n")
+	print("Type \'h\' for help.\n")
 	collatz_repl()

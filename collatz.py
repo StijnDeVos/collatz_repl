@@ -8,7 +8,7 @@ class collatz:
 		return f"Current n = {self.n}"
 
 	def __add__(self):
-		return "Not possible lol"
+		return NotImplementedError
 
 	def set(self, n):
 		self.n = n
