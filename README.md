@@ -5,6 +5,6 @@ TO-DO:
 
 - visualize stopping times for given starting values
 - implement memoization
-- add a command `plot n file_name.png` that writes a plot to disk
-- improve `parse_input` function to facilitate extendibility
+- extend the `plot` command to take an additional argument `file_path` that allows the user to write a plot to disk
+- improve `parse_input` logic to facilitate extendibility
 
