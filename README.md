@@ -7,3 +7,5 @@ TO-DO:
 
 - implement memoization
 - add a command `plot n file_name.png` that writes a plot to disk
+- improve `parse_input` function to facilitate extendibility
+
