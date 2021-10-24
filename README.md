@@ -8,7 +8,9 @@ TO-DO:
 - extend the `plot` command to take an additional argument `file_path` that allows the user to write a plot to disk
 - improve `parse_input` logic to facilitate extendibility
 
-<sub><sup>This is free and unencumbered software released into the public domain.
+_________________
+
+This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
 distribute this software, either in source code form or as a compiled
@@ -31,4 +33,4 @@ OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-For more information, please refer to <https://unlicense.org></sup></sub>
+For more information, please refer to <https://unlicense.org>
