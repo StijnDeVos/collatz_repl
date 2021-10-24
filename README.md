@@ -1,5 +1,5 @@
 # collatz_repl
-A very simple REPL that prints Collatz sequences. There is no purpose or value to this except to practise programming in Python. 
+A very simple REPL that prints Collatz sequences. There is no value to this except to practise programming in Python. 
 
 TO-DO:
 
