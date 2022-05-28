@@ -34,10 +34,9 @@ def plot_sequence(ns):
 		max_value = max(s)
 		max_index = s.index(max_value)
 		plt.text(
-			max_index + 1, 
-			max_value + 1, 
-			f"({max_index}, {max_value})", 
-			bbox=dict(facecolor='red', alpha=0.2)
+			max_index + 0.5, 
+			max_value + 0.5, 
+			f"({max_index}, {max_value})"
 		)
 		plt.plot(s.index(max_value), max_value, '-ro')
 

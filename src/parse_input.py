@@ -11,15 +11,22 @@ def parse_input(arg):
 		except Exception as e:
 			print(f"Error: {e}")
 		else:
-			plot_sequence(ns)
+			if n < 1:
+				print(f"Error: not defined for n < 1.")
+			else:
+				plot_sequence(ns)
 	elif len(arg) == 1 and arg[0] != "h":
 		try:
 			n = int(arg[0])
 		except Exception as e:
 			print(f"Error: {e}")		
 		else:
-			c = collatz(n).sequence()
-			print_sequence(c)
+			if n < 1:
+				print(f"Error: not defined for n < 1.")
+			else:
+				c = collatz(n).sequence()
+				print_sequence(c)
+
 	elif len(arg) == 1 and arg[0] == "h":
 		print_help()
 
